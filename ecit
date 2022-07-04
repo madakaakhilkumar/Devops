@@ -1,0 +1,19 @@
+[0;1;32m●[0m jenkins.service - Jenkins Continuous Integration Server
+   Loaded: loaded (/usr/lib/systemd/system/jenkins.service; disabled; vendor preset: disabled)
+   Active: [0;1;32mactive (running)[0m since Mon 2022-07-04 08:34:46 UTC; 11s ago
+ Main PID: 18006 (java)
+    Tasks: 41 (limit: 4700)
+   Memory: 379.4M
+   CGroup: /system.slice/jenkins.service
+           └─18006 /usr/bin/java -Djava.awt.headless=true -jar /usr/share/java/jenkins.war --webroot=/var/cache/jenkins/war --httpPort=8080
+
+Jul 04 08:34:20 ip-172-31-22-36.us-east-2.compute.internal jenkins[18006]: Please use the following password to proceed to installation:
+Jul 04 08:34:20 ip-172-31-22-36.us-east-2.compute.internal jenkins[18006]: 030890ef64c845598fec6a8bfeeb1e2b
+Jul 04 08:34:20 ip-172-31-22-36.us-east-2.compute.internal jenkins[18006]: This may also be found at: /var/lib/jenkins/secrets/initialAdminPassword
+Jul 04 08:34:20 ip-172-31-22-36.us-east-2.compute.internal jenkins[18006]: *************************************************************
+Jul 04 08:34:45 ip-172-31-22-36.us-east-2.compute.internal jenkins[18006]: 2022-07-04 08:34:45.653+0000 [id=41]        INFO        h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tasks.Maven.MavenInstaller
+Jul 04 08:34:45 ip-172-31-22-36.us-east-2.compute.internal jenkins[18006]: 2022-07-04 08:34:45.654+0000 [id=41]        INFO        hudson.util.Retrier#start: Performed the action check updates server successfully at the attempt #1
+Jul 04 08:34:45 ip-172-31-22-36.us-east-2.compute.internal jenkins[18006]: 2022-07-04 08:34:45.698+0000 [id=41]        INFO        hudson.model.AsyncPeriodicWork#lambda$doRun$1: Finished Download metadata. 26,288 ms
+Jul 04 08:34:46 ip-172-31-22-36.us-east-2.compute.internal jenkins[18006]: 2022-07-04 08:34:46.166+0000 [id=27]        INFO        jenkins.InitReactorRunner$1#onAttained: Completed initialization
+Jul 04 08:34:46 ip-172-31-22-36.us-east-2.compute.internal jenkins[18006]: 2022-07-04 08:34:46.262+0000 [id=20]        INFO        hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+Jul 04 08:34:46 ip-172-31-22-36.us-east-2.compute.internal systemd[1]: Started Jenkins Continuous Integration Server.
